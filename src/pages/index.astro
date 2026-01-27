@@ -1,26 +1,56 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Layout from "../layouts/main.astro";
+import { Hero } from "../components/Hero";
+import { Mission } from "../components/Mission";
+import { Timeline } from "../components/Timeline";
+import { Features } from "../components/Features";
+import { SpeakerCarousel } from "../components/SpeakerCarousel";
+import { Registration } from "../components/Registration";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<Layout title="The Campus Catalyst | Biotech Event Series">
+	<main
+		class="bg-deep-black min-h-screen selection:bg-acid-lime selection:text-deep-black"
+	>
+		<Hero client:load />
+		<Mission client:visible />
+		<Timeline client:visible />
+		<Features client:visible />
+		<SpeakerCarousel client:visible />
+		<Registration client:visible />
+		<Footer client:visible />
+	</main>
+</Layout>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+<style is:global>
+	/* Custom scrollbar for that premium feel */
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: #0a0a0a;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #242424;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: #c8ff00;
+	}
+
+	/* Utility for no scrollbar */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	/* Diagonal Clip Path for section transitions */
+	.clip-path-diagonal {
+		clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+	}
+</style>

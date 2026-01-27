@@ -6,8 +6,13 @@ dist/
 # dependencies
 node_modules/
 
+#agentic directories
+.skillsRepo/
+# .claude/skills/
+# .gemini/skills/
+
 #localAssets
-src/localAssets/
+# src/localAssets/
 
 # logs
 npm-debug.log*

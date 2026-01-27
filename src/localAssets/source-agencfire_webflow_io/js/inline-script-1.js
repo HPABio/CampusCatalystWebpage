@@ -1,0 +1,1 @@
+WebFont.load({  google: {    families: ["Archivo:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"]  }});
