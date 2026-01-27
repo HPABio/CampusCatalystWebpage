@@ -12,7 +12,7 @@ node_modules/
 # .gemini/skills/
 
 #localAssets
-# src/localAssets/
+src/localAssets/
 
 # logs
 npm-debug.log*
