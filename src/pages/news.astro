@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="News | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-8">
+                Latest <span class="text-acid-lime">Updates</span>
+            </h1>
+            <p class="text-xl text-off-white/60 max-w-2xl mb-12">
+                Stay informed about speaker announcements, event recaps, and
+                regional highlights.
+            </p>
+
+            <div class="space-y-8">
+                <article
+                    class="p-12 bg-charcoal border border-graphite rounded-3xl flex flex-col md:flex-row gap-8 items-start hover:border-acid-lime/30 transition-all cursor-pointer group"
+                    onclick="window.location.href='/recap/vol1'"
+                >
+                    <div
+                        class="w-full md:w-64 aspect-square bg-graphite rounded-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all"
+                    >
+                        <div
+                            class="w-full h-full bg-gradient-to-br from-charcoal to-graphite"
+                        >
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <time
+                            class="text-acid-lime font-bold uppercase tracking-widest text-xs"
+                            >Nov 15, 2024</time
+                        >
+                        <h2
+                            class="text-3xl font-black uppercase mt-4 mb-4 group-hover:text-acid-lime transition-colors"
+                        >
+                            Vol 1 Recap: The Journey Begins
+                        </h2>
+                        <p class="text-off-white/60 mb-8 line-clamp-2">
+                            A huge thank you to everyone who joined us at
+                            BioLabs Heidelberg for the launch of The Campus
+                            Catalyst—co-organized by BioCentra, Nucleate
+                            Germany, and BioLabs Heidelberg.
+                        </p>
+                        <a
+                            href="/recap/vol1"
+                            class="text-white font-black uppercase text-sm border-b-2 border-acid-lime pb-1 block w-fit"
+                            >Read More</a
+                        >
+                    </div>
+                </article>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

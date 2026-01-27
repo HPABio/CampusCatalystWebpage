@@ -1,0 +1,201 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+
+import NicoleHecht from "../assets/CampusCatalyst Design - Vol 1/PR Material/Nicole Hecht - HeadShot - BioRN.png";
+import HeinzHaenel from "../assets/CampusCatalyst Design - Vol 1/PR Material/Heinz Haenel - Portrait - Oxy5.png";
+import EdwardHolson from "../assets/CampusCatalyst Design - Vol 1/PR Material/Edward Holson - Anavo - Portrait.webp";
+import KseniaBurka from "../assets/CampusCatalyst Design - Vol 1/PR Material/Ksenia Burka - Reactosome - Portrait.png";
+import JohannaMichielin from "../assets/CampusCatalyst Design - Vol 1/PR Material/Johanna Michielin - BioLabs - Portrait.avif";
+import AnnKristin from "../assets/CampusCatalyst Design - Vol 1/PR Material/Ann-Kristin Mueller_edited.png";
+import AlexanderPattberg from "../assets/CampusCatalyst Design - Vol 1/PR Material/Alexander Pattberg.png";
+
+const speakers = [
+    {
+        name: "Dr. Nicole Hecht",
+        role: "BioRN",
+        sub: "Ecosystem Builder",
+        image: NicoleHecht,
+        variant: "lime",
+        vol: 1,
+        pattern: "dots",
+    },
+    {
+        name: "Prof. Heinz Hänel",
+        role: "Oxy5 / ex-Sanofi",
+        sub: "Industry Expert",
+        image: HeinzHaenel,
+        variant: "lime",
+        vol: 1,
+        pattern: "grid",
+    },
+    {
+        name: "Edward Holson",
+        role: "Anavo Therapeutics",
+        sub: "CSO & Serial Entrepreneur",
+        image: EdwardHolson,
+        variant: "lime",
+        vol: 1,
+        pattern: "lines",
+    },
+    {
+        name: "Alexander Pattberg",
+        role: "BioLabs Heidelberg",
+        sub: "Leader | Strategic Ecosystem Builder",
+        image: AlexanderPattberg,
+        variant: "lime",
+        vol: 1,
+        pattern: "cross",
+    },
+    {
+        name: "Ksenia Burka",
+        role: "Reactosome",
+        sub: "CEO & Co-Founder",
+        image: KseniaBurka,
+        variant: "lime",
+        vol: 1,
+        pattern: "dots",
+    },
+    {
+        name: "Johanna Michielin",
+        role: "BioLabs",
+        sub: "Regional Director Europe",
+        image: JohannaMichielin,
+        variant: "lime",
+        vol: 1,
+        pattern: "grid",
+    },
+    {
+        name: "Ann-Kristin Müller",
+        role: "Managing Director, BioLabs",
+        sub: "Ecosystem Builder",
+        image: AnnKristin,
+        variant: "lime",
+        vol: 1,
+        pattern: "lines",
+    },
+    {
+        name: "Felix Ernst Schmelzer",
+        role: "SYSTEM DIALOG MED.",
+        sub: "Moderator & Strategist",
+        image: null,
+        variant: "nikon",
+        vol: 2,
+        pattern: "cross",
+    },
+];
+
+const getPattern = (type: string, color: string) => {
+    switch (type) {
+        case "dots":
+            return {
+                backgroundImage: `radial-gradient(${color} 1px, transparent 1px)`,
+                backgroundSize: "16px 16px",
+            };
+        case "lines":
+            return {
+                backgroundImage: `repeating-linear-gradient(45deg, ${color} 0, ${color} 1px, transparent 0, transparent 12px)`,
+            };
+        case "cross":
+            return {
+                backgroundImage: `
+                    linear-gradient(45deg, ${color} 1px, transparent 1px),
+                    linear-gradient(-45deg, ${color} 1px, transparent 1px)
+                `,
+                backgroundSize: "20px 20px",
+            };
+        case "grid":
+        default:
+            return {
+                backgroundImage: `
+                    linear-gradient(to right, ${color} 1px, transparent 1px),
+                    linear-gradient(to bottom, ${color} 1px, transparent 1px)
+                `,
+                backgroundSize: "24px 24px",
+            };
+    }
+};
+---
+
+<Layout title="Speakers | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-black uppercase mb-8">
+                Our <span class="text-acid-lime">Speakers</span>
+            </h1>
+            <p class="text-xl text-off-white/60 max-w-2xl mb-16">
+                Meet the industry heavyweights, visionary founders, and
+                ecosystem builders shaping the future of life sciences.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                {
+                    speakers.map((speaker) => (
+                        <div class="group">
+                            <div class="aspect-[4/5] bg-charcoal border border-graphite rounded-2xl mb-6 overflow-hidden relative transition-all duration-500 group-hover:border-acid-lime">
+                                {/* Pattern Background */}
+                                <div
+                                    class="absolute inset-0 z-0 opacity-10 group-hover:opacity-25 transition-opacity"
+                                    style={getPattern(
+                                        speaker.pattern,
+                                        speaker.variant === "lime"
+                                            ? "#8FFF2B"
+                                            : "#FFD400",
+                                    )}
+                                />
+
+                                {/* Glow */}
+                                <div
+                                    class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                    style={{
+                                        background: `radial-gradient(circle at center, ${speaker.variant === "lime" ? "rgba(143, 255, 43, 0.15)" : "rgba(255, 212, 0, 0.15)"} 0%, transparent 70%)`,
+                                    }}
+                                />
+
+                                {speaker.image ? (
+                                    <img
+                                        src={speaker.image.src}
+                                        alt={speaker.name}
+                                        class="relative z-10 w-full h-full object-contain object-bottom scale-110 group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                ) : (
+                                    <div class="w-full h-full flex items-center justify-center relative z-10">
+                                        <span class="text-6xl font-black opacity-10 uppercase">
+                                            {speaker.name
+                                                .split(" ")
+                                                .map((n) => n[0])
+                                                .join("")}
+                                        </span>
+                                    </div>
+                                )}
+
+                                <div class="absolute inset-0 bg-gradient-to-t from-deep-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-20" />
+
+                                {/* Volume Badge (Hover) */}
+                                <div
+                                    class={`absolute top-4 right-4 z-30 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${speaker.variant === "lime" ? "bg-acid-lime text-deep-black shadow-[0_0_15px_rgba(143,255,43,0.5)]" : "bg-nikon-yellow text-deep-black shadow-[0_0_15px_rgba(255,212,0,0.5)]"} transform rotate-12 group-hover:rotate-0 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100`}
+                                >
+                                    Vol {speaker.vol}
+                                </div>
+                            </div>
+
+                            <h3 class="text-3xl font-black uppercase group-hover:text-acid-lime transition-colors mb-2">
+                                {speaker.name}
+                            </h3>
+                            <p
+                                class={`font-bold uppercase tracking-widest text-sm mb-1 ${speaker.variant === "lime" ? "text-acid-lime" : "text-nikon-yellow"}`}
+                            >
+                                {speaker.role}
+                            </p>
+                            <p class="text-off-white/40 text-xs font-bold uppercase tracking-wider">
+                                {speaker.sub}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

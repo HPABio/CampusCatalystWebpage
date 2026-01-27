@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="Event Template | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <div class="h-[60vh] bg-charcoal relative flex items-end">
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-black to-transparent"
+            >
+            </div>
+            <div class="max-w-7xl mx-auto px-6 w-full pb-12 relative z-10">
+                <span
+                    class="text-acid-lime font-black uppercase tracking-[0.2em] text-sm mb-4 block"
+                    >Event Template</span
+                >
+                <h1
+                    class="text-5xl md:text-8xl font-black uppercase leading-none"
+                >
+                    The Future of <span class="text-acid-lime">Biotech</span>
+                </h1>
+            </div>
+        </div>
+
+        <section
+            class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16"
+        >
+            <div
+                class="md:col-span-2 space-y-8 text-xl text-off-white/80 leading-relaxed"
+            >
+                <p>
+                    This is a template for individual event pages. It includes
+                    space for a hero, about text, program details, and speaker
+                    spotlights.
+                </p>
+                <h2 class="text-3xl font-black uppercase text-white mt-12">
+                    What to expect
+                </h2>
+                <ul class="space-y-4">
+                    <li class="flex gap-4">
+                        <span class="text-acid-lime font-black">/ 01</span>
+                        <span>High-level networking with industry peers</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-acid-lime font-black">/ 02</span>
+                        <span>Insights from experienced biotech founders</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-acid-lime font-black">/ 03</span>
+                        <span>Deep dives into the local ecosystem</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-8">
+                <div class="p-8 bg-charcoal border border-graphite rounded-2xl">
+                    <h3
+                        class="text-acid-lime font-black uppercase text-xs tracking-widest mb-6"
+                    >
+                        Details
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-white font-bold uppercase text-sm">
+                                Date & Time
+                            </p>
+                            <p class="text-off-white/60">TBD</p>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold uppercase text-sm">
+                                Location
+                            </p>
+                            <p class="text-off-white/60">BioLabs Heidelberg</p>
+                        </div>
+                    </div>
+                    <button
+                        disabled
+                        class="w-full mt-8 bg-acid-lime text-deep-black py-4 rounded-xl font-black uppercase tracking-tight opacity-50"
+                    >
+                        Registration Closed
+                    </button>
+                </div>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

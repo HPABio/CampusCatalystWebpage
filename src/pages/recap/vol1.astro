@@ -1,0 +1,411 @@
+---
+import Layout from "../../layouts/main.astro";
+import { Footer } from "../../components/Footer";
+import { Badge } from "../../components/ui/Badge";
+import "../../styles/global.css";
+---
+
+<Layout title="Vol 1 Recap | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        {/* Hero Section */}
+        <section class="relative h-[70vh] flex items-end overflow-hidden">
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/60 to-transparent z-10"
+            >
+            </div>
+            <div class="absolute inset-0 bg-charcoal">
+                <div
+                    class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-acid-lime via-transparent to-transparent"
+                >
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 w-full pb-20 relative z-20">
+                <div class="flex items-center gap-4 mb-6">
+                    <span
+                        class="px-4 py-1 bg-acid-lime text-deep-black rounded-full font-black uppercase text-xs"
+                        >Series Kickoff</span
+                    >
+                    <span
+                        class="text-white/60 font-bold text-sm uppercase tracking-widest"
+                        >Nov 11, 2024</span
+                    >
+                </div>
+                <h1
+                    class="text-5xl md:text-9xl font-black uppercase leading-none tracking-tighter"
+                >
+                    Campus Catalyst <span class="text-acid-lime block md:inline"
+                        >Vol 1</span
+                    >
+                </h1>
+                <p
+                    class="mt-8 text-xl md:text-2xl text-off-white/80 max-w-3xl font-medium leading-relaxed"
+                >
+                    Connecting innovators, researchers, and entrepreneurs at the
+                    heart of Heidelberg's life science ecosystem.
+                </p>
+            </div>
+        </section>
+
+        {/* Event Summary */}
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-8 space-y-12">
+                    <div class="prose prose-invert prose-2xl max-w-none">
+                        <p
+                            class="text-2xl md:text-3xl font-medium text-white leading-relaxed"
+                        >
+                            The first iteration of the Campus Catalyst event
+                            series brought together an inspiring mix of <span
+                                class="text-acid-lime">founders</span
+                            >, <span class="text-acid-lime">students</span>, and <span
+                                class="text-acid-lime">ecosystem builders</span
+                            > at BioLabs Heidelberg.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
+                        <div
+                            class="p-10 bg-charcoal border border-graphite rounded-3xl group hover:border-acid-lime/30 transition-all"
+                        >
+                            <h3
+                                class="text-acid-lime font-black uppercase text-sm tracking-widest mb-6"
+                            >
+                                Collaboration Spotlight
+                            </h3>
+                            <h2 class="text-3xl font-black uppercase mb-4">
+                                "It Takes a Village"
+                            </h2>
+                            <p class="text-off-white/60 leading-relaxed">
+                                Key regional stakeholders explored the future of
+                                biotech, discussing the collaboration needed to
+                                turn science into impact.
+                            </p>
+                        </div>
+                        <div
+                            class="p-10 bg-charcoal border border-graphite rounded-3xl group hover:border-acid-lime/30 transition-all"
+                        >
+                            <h3
+                                class="text-acid-lime font-black uppercase text-sm tracking-widest mb-6"
+                            >
+                                Innovation Insight
+                            </h3>
+                            <h2 class="text-3xl font-black uppercase mb-4">
+                                iGEM Heidelberg
+                            </h2>
+                            <p class="text-off-white/60 leading-relaxed">
+                                Showcasing the next generation of synthetic
+                                biology and launching a practical guide for
+                                regional founders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Speakers Section */}
+                <section class="py-24 px-6 bg-charcoal/20">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="mb-16">
+                            <Badge variant="solid" className="mb-4"
+                                >Voices of Impact</Badge
+                            >
+                            <h2
+                                class="text-4xl md:text-6xl font-black uppercase"
+                            >
+                                Featured <span class="text-acid-lime"
+                                    >Speakers</span
+                                >
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            {/* Dr. Nicole Hecht */}
+                            <div
+                                class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
+                            >
+                                <div class="flex flex-col md:flex-row h-full">
+                                    <div
+                                        class="md:w-1/3 aspect-[4/5] bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    >
+                                        <img
+                                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+                                            alt="Dr. Nicole Hecht"
+                                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex-1 p-8 flex flex-col justify-center"
+                                    >
+                                        <h3
+                                            class="text-2xl font-black uppercase mb-2"
+                                        >
+                                            Dr. Nicole Hecht
+                                        </h3>
+                                        <p
+                                            class="text-acid-lime font-bold uppercase tracking-widest text-xs mb-4"
+                                        >
+                                            BioRN
+                                        </p>
+                                        <p
+                                            class="text-off-white/60 text-sm leading-relaxed italic"
+                                        >
+                                            "Representing one of Germany's
+                                            strongest Biotech hubs BioRN. As a
+                                            key driver of communication and
+                                            events for the cluster, Nicole is a
+                                            central figure in weaving the
+                                            network that supports our region's
+                                            scientific and entrepreneurial
+                                            talent."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Prof. Heinz Hänel */}
+                            <div
+                                class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
+                            >
+                                <div class="flex flex-col md:flex-row h-full">
+                                    <div
+                                        class="md:w-1/3 aspect-[4/5] bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    >
+                                        <img
+                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400"
+                                            alt="Prof. Heinz Hänel"
+                                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex-1 p-8 flex flex-col justify-center"
+                                    >
+                                        <h3
+                                            class="text-2xl font-black uppercase mb-2"
+                                        >
+                                            Prof. Heinz Hänel
+                                        </h3>
+                                        <p
+                                            class="text-acid-lime font-bold uppercase tracking-widest text-xs mb-4"
+                                        >
+                                            Oxy5 / ex-Sanofi
+                                        </p>
+                                        <p
+                                            class="text-off-white/60 text-sm leading-relaxed italic"
+                                        >
+                                            "He was instrumental in the fight
+                                            against the African sleeping
+                                            sickness, leading the development of
+                                            Fexinidazole, the first all-oral
+                                            treatment. His work has contributed
+                                            to three separate drugs achieving
+                                            FDA approval."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Edward Holson */}
+                            <div
+                                class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
+                            >
+                                <div class="flex flex-col md:flex-row h-full">
+                                    <div
+                                        class="md:w-1/3 aspect-[4/5] bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    >
+                                        <img
+                                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
+                                            alt="Edward Holson"
+                                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex-1 p-8 flex flex-col justify-center"
+                                    >
+                                        <h3
+                                            class="text-2xl font-black uppercase mb-2"
+                                        >
+                                            Edward Holson
+                                        </h3>
+                                        <p
+                                            class="text-acid-lime font-bold uppercase tracking-widest text-xs mb-4"
+                                        >
+                                            Anavo Therapeutics, CSO
+                                        </p>
+                                        <p
+                                            class="text-off-white/60 text-sm leading-relaxed italic"
+                                        >
+                                            "As a serial entrepreneur in the
+                                            life sciences with over two decades
+                                            of experience, he gathered
+                                            invaluable experiences how to build
+                                            companies from the ground up. In his
+                                            current role, he pushes the boundary
+                                            on what was considered undruggable."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Ksenia Burka */}
+                            <div
+                                class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
+                            >
+                                <div class="flex flex-col md:flex-row h-full">
+                                    <div
+                                        class="md:w-1/3 aspect-[4/5] bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    >
+                                        <img
+                                            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
+                                            alt="Ksenia Burka"
+                                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex-1 p-8 flex flex-col justify-center"
+                                    >
+                                        <h3
+                                            class="text-2xl font-black uppercase mb-2"
+                                        >
+                                            Ksenia Burka
+                                        </h3>
+                                        <p
+                                            class="text-acid-lime font-bold uppercase tracking-widest text-xs mb-4"
+                                        >
+                                            Reactosome, CEO
+                                        </p>
+                                        <p
+                                            class="text-off-white/60 text-sm leading-relaxed italic"
+                                        >
+                                            "Co-Founder and CEO of Reactosome,
+                                            the synthetic nucleus company,
+                                            enabling safer gene therapies! After
+                                            participating in the Nucleate
+                                            activator and winning one-year free
+                                            lab space at BioLabs."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Johanna Michielin */}
+                            <div
+                                class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
+                            >
+                                <div class="flex flex-col md:flex-row h-full">
+                                    <div
+                                        class="md:w-1/3 aspect-[4/5] bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    >
+                                        <img
+                                            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400"
+                                            alt="Johanna Michielin"
+                                            class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                        />
+                                    </div>
+                                    <div
+                                        class="flex-1 p-8 flex flex-col justify-center"
+                                    >
+                                        <h3
+                                            class="text-2xl font-black uppercase mb-2"
+                                        >
+                                            Johanna Michielin
+                                        </h3>
+                                        <p
+                                            class="text-acid-lime font-bold uppercase tracking-widest text-xs mb-4"
+                                        >
+                                            BioLabs Europe
+                                        </p>
+                                        <p
+                                            class="text-off-white/60 text-sm leading-relaxed italic"
+                                        >
+                                            "Regional Director Europe of
+                                            BioLabs. BioLabs has supported over
+                                            500 life science start-ups and has
+                                            unmatched experiences about what it
+                                            takes to succeed in the
+                                            life-sciences!"
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        {/* iGEM Section */}
+        <section
+            class="py-24 bg-charcoal border-y border-graphite relative overflow-hidden"
+        >
+            <div
+                class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+            >
+                <div>
+                    <Badge variant="outline" className="mb-6"
+                        >Project Launch</Badge
+                    >
+                    <h2
+                        class="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight"
+                    >
+                        Mapping the <span class="text-acid-lime">Ecosystem</span
+                        >
+                    </h2>
+                    <p class="text-xl text-off-white/70 leading-relaxed mb-8">
+                        During Vol 1, the iGEM Team Heidelberg sharing their
+                        journey from this year’s international competition and
+                        launched a practical guide mapping the regional life
+                        science support ecosystem for founders.
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="text-3xl grayscale opacity-50">🧬</span>
+                        <span class="text-off-white/50 italic"
+                            >The next generation of synthetic biology
+                            innovation.</span
+                        >
+                    </div>
+                </div>
+                <div
+                    class="aspect-video bg-deep-black rounded-3xl border border-graphite flex items-center justify-center p-12 overflow-hidden group"
+                >
+                    <div
+                        class="text-center group-hover:scale-110 transition-transform duration-700"
+                    >
+                        <p
+                            class="text-acid-lime font-black uppercase text-xs tracking-widest mb-4"
+                        >
+                            Practical Guide
+                        </p>
+                        <h3 class="text-2xl font-black uppercase">
+                            Southwest Germany<br />Biotech Map
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* Closing */}
+        <section class="py-32 px-6 text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+                On to the <span class="text-acid-lime">Next One</span>
+            </h2>
+            <p class="text-xl text-off-white/60 mb-12">
+                Campus Catalyst continues to connect people, ideas, and
+                institutions across the German life science ecosystem.
+            </p>
+            <a
+                href="/"
+                class="inline-block px-12 py-5 bg-acid-lime text-deep-black rounded-full font-black uppercase tracking-tight hover:scale-105 transition-transform"
+            >
+                Back to Series Overview
+            </a>
+        </section>
+
+        <Footer client:visible />
+    </main>
+</Layout>
+
+<style>
+    .glow-lime {
+        box-shadow: 0 0 20px rgba(143, 255, 43, 0.3);
+    }
+</style>

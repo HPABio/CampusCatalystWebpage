@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { Badge } from './ui/Badge';
 import { Section } from './ui/Section';
+import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png';
 
 export const Hero = () => {
     return (
@@ -18,15 +19,18 @@ export const Hero = () => {
                     </Badge>
                 </motion.div>
 
-                <motion.h1
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none tracking-tighter mb-8"
+                    className="mb-8"
                 >
-                    The Campus <br />
-                    <span className="text-acid-lime text-glow-lime">Catalyst</span>
-                </motion.h1>
+                    <img
+                        src={logo.src}
+                        alt="The Campus Catalyst"
+                        className="h-32 md:h-48 lg:h-64 object-contain filter drop-shadow-[0_0_30px_rgba(143,255,43,0.3)] mx-auto"
+                    />
+                </motion.div>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -44,10 +48,10 @@ export const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-6"
                 >
-                    <Button variant="sticker" size="lg">
-                        REGISTER FOR CC I
+                    <Button variant="sticker" size="lg" onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}>
+                        REGISTER FOR CAM/CAT VOL 2
                     </Button>
-                    <Button variant="outline" size="lg">
+                    <Button variant="outline" size="lg" onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}>
                         VIEW TIMELINE
                     </Button>
                 </motion.div>

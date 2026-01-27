@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="Imprint | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black uppercase mb-8">
+                Imprint & <span class="text-acid-lime">Privacy</span>
+            </h1>
+            <div class="space-y-12 text-off-white/70">
+                <div>
+                    <h2 class="text-xl font-black uppercase text-white mb-4">
+                        Angaben gemäß § 5 TMG
+                    </h2>
+                    <p>
+                        Nucleate Germany<br />
+                        c/o [Hosting Entity]<br />
+                        Heidelberg, Germany
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-black uppercase text-white mb-4">
+                        Contact
+                    </h2>
+                    <p>Email: hello@campuscatalyst.de</p>
+                </div>
+                <div class="pt-12 border-t border-graphite">
+                    <h2 class="text-2xl font-black uppercase text-white mb-6">
+                        Privacy Policy
+                    </h2>
+                    <p>
+                        Your privacy is important to us. This section would
+                        contain detailed information about how we handle your
+                        data, in compliance with GDPR.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

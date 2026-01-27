@@ -5,7 +5,7 @@ import { Badge } from './ui/Badge';
 
 export const Registration = () => {
     return (
-        <Section variant="clean" className="py-0">
+        <Section variant="clean" className="py-0" id="registration">
             <div className="bg-acid-lime rounded-2xl md:rounded-[40px] px-8 py-20 md:p-24 text-deep-black relative overflow-hidden group">
                 <div className="relative z-10 flex flex-col items-center text-center">
                     <Badge variant="solid" className="bg-deep-black text-acid-lime mb-6">Act Fast</Badge>
@@ -18,10 +18,19 @@ export const Registration = () => {
                         Seats are limited to ensure high-voltage networking.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6">
-                        <Button className="bg-deep-black text-acid-lime hover:scale-105 transition-transform" size="lg">
+                        <Button
+                            className="bg-deep-black text-acid-lime hover:scale-105 transition-transform"
+                            size="lg"
+                            onClick={() => window.open('https://luma.com/gj3649ki', '_blank')}
+                        >
                             SECURE YOUR SPOT
                         </Button>
-                        <Button variant="outline" className="border-deep-black text-deep-black hover:bg-deep-black hover:text-acid-lime" size="lg">
+                        <Button
+                            variant="outline"
+                            className="border-deep-black text-deep-black hover:bg-deep-black hover:text-acid-lime"
+                            size="lg"
+                            onClick={() => document.getElementById('newsletter')?.scrollIntoView({ behavior: 'smooth' })}
+                        >
                             NEWSLETTER SIGNUP
                         </Button>
                     </div>
@@ -36,7 +45,7 @@ export const Registration = () => {
                     transition={{ duration: 8, repeat: Infinity }}
                     className="absolute top-10 right-10 opacity-20 hidden md:block"
                 >
-                    <p className="text-[200px] leading-none font-black select-none">CC I</p>
+                    <p className="text-[200px] leading-none font-black select-none">CAM/CAT VOL 2</p>
                 </motion.div>
 
                 <div className="absolute inset-0 bg-[url('/src/assets/noise.png')] opacity-10 pointer-events-none" />

@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="Get Involved | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-8">
+                Get <span class="text-acid-lime">Involved</span>
+            </h1>
+            <p class="text-xl text-off-white/60 max-w-2xl mb-12">
+                Shape the future of the life science ecosystem. There are many
+                ways to be part of the Campus Catalyst.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div
+                    class="p-10 bg-charcoal border border-graphite rounded-3xl hover:border-acid-lime/50 transition-colors"
+                >
+                    <h2 class="text-3xl font-black uppercase mb-4">Speak</h2>
+                    <p class="text-off-white/60 mb-8">
+                        Share your expertise or founder journey with our
+                        community.
+                    </p>
+                    <a
+                        href="/contact"
+                        class="inline-block px-6 py-3 bg-acid-lime text-deep-black rounded-full font-black uppercase text-sm"
+                        >Apply to Speak</a
+                    >
+                </div>
+                <div
+                    class="p-10 bg-charcoal border border-graphite rounded-3xl hover:border-acid-lime/50 transition-colors"
+                >
+                    <h2 class="text-3xl font-black uppercase mb-4">Sponsor</h2>
+                    <p class="text-off-white/60 mb-8">
+                        Support the ecosystem and increase your visibility among
+                        top talent and start-ups.
+                    </p>
+                    <a
+                        href="/contact"
+                        class="inline-block px-6 py-3 bg-acid-lime text-deep-black rounded-full font-black uppercase text-sm"
+                        >Become a Sponsor</a
+                    >
+                </div>
+                <div
+                    class="p-10 bg-charcoal border border-graphite rounded-3xl hover:border-acid-lime/50 transition-colors"
+                >
+                    <h2 class="text-3xl font-black uppercase mb-4">Pitch</h2>
+                    <p class="text-off-white/60 mb-8">
+                        Showcase your start-up at our next spotlight session.
+                    </p>
+                    <a
+                        href="/contact"
+                        class="inline-block px-6 py-3 bg-acid-lime text-deep-black rounded-full font-black uppercase text-sm"
+                        >Submit your Pitch</a
+                    >
+                </div>
+                <div
+                    class="p-10 bg-charcoal border border-graphite rounded-3xl hover:border-acid-lime/50 transition-colors"
+                >
+                    <h2 class="text-3xl font-black uppercase mb-4">
+                        Volunteer
+                    </h2>
+                    <p class="text-off-white/60 mb-8">
+                        Join the team and help us organize the next Campus
+                        Catalyst.
+                    </p>
+                    <a
+                        href="/contact"
+                        class="inline-block px-6 py-3 bg-acid-lime text-deep-black rounded-full font-black uppercase text-sm"
+                        >Join the Team</a
+                    >
+                </div>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

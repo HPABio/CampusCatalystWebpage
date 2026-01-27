@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="Code of Conduct | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black uppercase mb-8">
+                Code of <span class="text-acid-lime">Conduct</span>
+            </h1>
+            <div class="space-y-8 text-off-white/70 leading-relaxed">
+                <p>
+                    We are committed to providing a friendly, safe, and
+                    welcoming environment for all, regardless of gender, sexual
+                    orientation, disability, ethnicity, or religion.
+                </p>
+                <h2 class="text-2xl font-black uppercase text-white mt-8">
+                    Our Standards
+                </h2>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        Be kind to others. Do not insult or put down other
+                        attendees.
+                    </li>
+                    <li>
+                        Behave professionally. Remember that harassment and
+                        sexist, racist, or exclusionary jokes are not
+                        appropriate.
+                    </li>
+                    <li>
+                        All communication should be appropriate for a
+                        professional audience including people of many different
+                        backgrounds.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

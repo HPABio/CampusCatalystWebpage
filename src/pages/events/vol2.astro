@@ -1,0 +1,554 @@
+---
+import Layout from "../../layouts/main.astro";
+import { Footer } from "../../components/Footer";
+import { Section } from "../../components/ui/Section";
+import "../../styles/global.css";
+
+const nikonYellow = "#FFD400";
+const ccLime = "#8FFF2B";
+---
+
+<Layout title="Vol 2: Shedding New Light On IDEAS | Campus Catalyst × Nikon">
+    <main
+        class="bg-deep-black min-h-screen text-off-white font-body selection:bg-nikon-yellow selection:text-deep-black"
+    >
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-graphite pt-16"
+        >
+            <!-- Background Effects -->
+            <div
+                class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,212,0,0.12)_0%,transparent_70%)]"
+            >
+            </div>
+            <div
+                class="absolute inset-0 z-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/dust.png')]"
+            >
+            </div>
+
+            <!-- Corner Badge -->
+            <div
+                class="absolute top-24 right-6 md:top-32 md:right-12 z-50 transform rotate-12 hover:rotate-0 transition-all duration-500 cursor-help"
+            >
+                <div
+                    class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-nikon-yellow text-deep-black flex flex-col items-center justify-center text-center p-2 border-4 border-deep-black shadow-[0_0_40px_rgba(255,212,0,0.4)] animate-pulse"
+                >
+                    <span class="text-[10px] font-black uppercase leading-none"
+                        >Limit</span
+                    >
+                    <span
+                        class="text-3xl md:text-5xl font-black leading-none py-1"
+                        >10</span
+                    >
+                    <span class="text-[10px] font-black uppercase leading-none"
+                        >People</span
+                    >
+                </div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-6 w-full relative z-10 py-20 text-center"
+            >
+                <div
+                    class="inline-flex items-center gap-3 border border-nikon-yellow/50 text-nikon-yellow px-5 py-2 text-sm font-black uppercase tracking-[0.2em] rounded-full mb-12 bg-nikon-yellow/5"
+                >
+                    <span
+                        class="w-2 h-2 rounded-full bg-nikon-yellow animate-ping"
+                    ></span>
+                    Campus Catalyst — Vol 2
+                </div>
+
+                <h1
+                    class="text-6xl md:text-[10rem] font-black uppercase leading-[0.85] tracking-tighter mb-12"
+                >
+                    Shedding <br class="hidden md:block" />New Light <br />
+                    On <span
+                        class="text-nikon-yellow inline-block relative px-4"
+                    >
+                        IDEAS
+                        <span
+                            class="absolute -bottom-4 left-0 w-full h-4 bg-nikon-yellow/20 blur-xl"
+                        ></span>
+                    </span>
+                </h1>
+
+                <div class="flex flex-col items-center space-y-10">
+                    <div class="flex flex-col items-center space-y-4">
+                        <p
+                            class="text-off-white/40 font-bold uppercase tracking-[0.4em] text-[10px]"
+                        >
+                            In collaboration with
+                        </p>
+                        <div
+                            class="flex flex-wrap justify-center items-center gap-8 md:gap-16"
+                        >
+                            <!-- Nikon Logo -->
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nikon_Logo.svg"
+                                alt="Nikon"
+                                class="h-10 md:h-14 w-auto filter brightness-0 invert"
+                            />
+
+                            <!-- Divider -->
+                            <div class="w-px h-8 bg-graphite rotate-12"></div>
+
+                            <!-- Campus Catalyst Logo Text -->
+                            <div
+                                class="text-3xl font-black uppercase tracking-tighter flex items-center gap-1"
+                            >
+                                <span class="text-white">Campus</span>
+                                <span class="text-acid-lime">Catalyst</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supporting Logos -->
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-12 pt-4"
+                    >
+                        <div
+                            class="text-[10px] font-black uppercase tracking-[0.3em] text-off-white/30 border-b border-white/10 pb-1"
+                        >
+                            BioLabs Heidelberg
+                        </div>
+                        <div
+                            class="text-[10px] font-black uppercase tracking-[0.3em] text-off-white/30 border-b border-white/10 pb-1"
+                        >
+                            Nucleate
+                        </div>
+                    </div>
+
+                    <div class="pt-8 flex flex-col items-center gap-8">
+                        <a
+                            href="#register"
+                            class="group relative px-16 py-6 bg-nikon-yellow text-deep-black font-black uppercase tracking-tighter text-2xl rounded-2xl overflow-hidden transition-all duration-300 hover:rounded-3xl hover:shadow-[0_0_50px_rgba(255,212,0,0.3)] hover:-translate-y-1"
+                        >
+                            <span class="relative z-10">Register today</span>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-0 bg-white/20 group-hover:h-full transition-all duration-300"
+                            >
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Attendance Selector -->
+                    <Section
+                        variant="clean"
+                        className="bg-charcoal/50 py-16 border-b border-graphite"
+                    >
+                        <div class="max-w-4xl mx-auto px-6">
+                            <div class="text-center mb-12">
+                                <h2 class="text-3xl font-black uppercase mb-4">
+                                    Choose your attendance
+                                </h2>
+                                <p class="text-off-white/60">
+                                    Select the programme that fits your
+                                    interests
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <a
+                                    href="#agenda-german"
+                                    class="group p-8 bg-deep-black border border-graphite rounded-3xl hover:border-nikon-yellow transition-all duration-300 flex flex-col items-center text-center space-y-4"
+                                >
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-nikon-yellow/10 flex items-center justify-center group-hover:bg-nikon-yellow transition-colors"
+                                    >
+                                        <span
+                                            class="text-2xl group-hover:scale-110 transition-transform"
+                                            >🔬</span
+                                        >
+                                    </div>
+                                    <h3
+                                        class="text-xl font-black uppercase group-hover:text-nikon-yellow transition-colors"
+                                    >
+                                        Full Microscopy Programme
+                                    </h3>
+                                    <p class="text-sm text-off-white/50">
+                                        Lectures + Hands-on sessions focused on
+                                        training and innovation.
+                                    </p>
+                                    <span
+                                        class="border border-nikon-yellow/30 text-nikon-yellow/70 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-widest"
+                                        >10:00 — 18:00</span
+                                    >
+                                </a>
+
+                                <a
+                                    href="#agenda-english"
+                                    class="group p-8 bg-deep-black border border-graphite rounded-3xl hover:border-acid-lime transition-all duration-300 flex flex-col items-center text-center space-y-4"
+                                >
+                                    <div
+                                        class="w-12 h-12 rounded-xl bg-acid-lime/10 flex items-center justify-center group-hover:bg-acid-lime transition-colors"
+                                    >
+                                        <span
+                                            class="text-2xl group-hover:scale-110 transition-transform"
+                                            >💡</span
+                                        >
+                                    </div>
+                                    <h3
+                                        class="text-xl font-black uppercase group-hover:text-acid-lime transition-colors"
+                                    >
+                                        Campus Catalyst Only
+                                    </h3>
+                                    <p class="text-sm text-off-white/50">
+                                        Idea sharing, pitching, and networking
+                                        with the community.
+                                    </p>
+                                    <span
+                                        class="border border-acid-lime/30 text-acid-lime/70 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-widest"
+                                        >16:30 — 18:00</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </Section>
+
+                    <!-- Speakers Section -->
+                    <Section variant="clean" className="py-24 bg-deep-black">
+                        <div class="max-w-7xl mx-auto px-6">
+                            <div class="mb-16 text-center">
+                                <span
+                                    class="inline-block px-4 py-1 bg-nikon-yellow text-deep-black rounded-full font-black uppercase text-xs mb-4"
+                                    >Master of Ceremonies</span
+                                >
+                                <h2
+                                    class="text-4xl md:text-6xl font-black uppercase"
+                                >
+                                    Featured <span class="text-nikon-yellow"
+                                        >Expert</span
+                                    >
+                                </h2>
+                            </div>
+
+                            <div class="max-w-4xl mx-auto">
+                                <div
+                                    class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-nikon-yellow transition-all duration-500"
+                                >
+                                    <div class="flex flex-col md:flex-row">
+                                        <div
+                                            class="md:w-2/5 aspect-square md:aspect-auto bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
+                                        >
+                                            <div
+                                                class="w-full h-full bg-gradient-to-br from-nikon-yellow/20 to-charcoal flex items-center justify-center text-nikon-yellow/10"
+                                            >
+                                                <span
+                                                    class="text-6xl font-black uppercase tracking-widest opacity-20"
+                                                    >FES</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex-1 p-10 flex flex-col justify-center"
+                                        >
+                                            <h3
+                                                class="text-3xl font-black uppercase mb-2"
+                                            >
+                                                Felix Ernst Schmelzer
+                                            </h3>
+                                            <p
+                                                class="text-nikon-yellow font-bold uppercase tracking-widest text-sm mb-6"
+                                            >
+                                                Science Communication Strategist
+                                                | Moderator
+                                            </p>
+                                            <div
+                                                class="space-y-4 text-off-white/70 text-sm leading-relaxed"
+                                            >
+                                                <p>
+                                                    Communication professional
+                                                    with extensive academic
+                                                    experience in research and
+                                                    teaching at various
+                                                    universities in Europe and
+                                                    Latin-America. PhD in
+                                                    Literature (subject of
+                                                    thesis: Rhetorical Transfer
+                                                    of Scientific Knowledge).
+                                                </p>
+                                                <p>
+                                                    Specialized in history of
+                                                    science and science
+                                                    communication, transforming
+                                                    complex scientific concepts
+                                                    into engaging narratives and
+                                                    vivid metaphors. Skilled at
+                                                    designing communication
+                                                    strategies that leverage
+                                                    rhetorical and metaphorical
+                                                    insights for enhanced
+                                                    impact.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+
+                    <!-- Description Section -->
+                    <Section variant="clean" className="py-24">
+                        <div
+                            class="max-w-3xl mx-auto px-6 text-center space-y-8"
+                        >
+                            <p
+                                class="text-2xl md:text-3xl font-medium leading-relaxed"
+                            >
+                                "Join Nikon for a full day of <span
+                                    class="text-nikon-yellow"
+                                    >microscopy training</span
+                                >, <span class="text-white">innovation</span>,
+                                and <span class="text-acid-lime"
+                                    >networking</span
+                                > at BioLabs Heidelberg."
+                            </p>
+                            <div class="flex justify-center gap-4">
+                                <div
+                                    class="px-4 py-2 bg-graphite rounded text-xs font-bold uppercase tracking-widest"
+                                >
+                                    26 FEB 2026
+                                </div>
+                                <div
+                                    class="px-4 py-2 bg-graphite rounded text-xs font-bold uppercase tracking-widest"
+                                >
+                                    BIOLABS HEIDELBERG
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+
+                    <!-- Agenda Section -->
+                    <Section
+                        variant="clean"
+                        className="py-24 bg-charcoal/30"
+                        id="agenda"
+                    >
+                        <div class="max-w-7xl mx-auto px-6">
+                            <div class="flex flex-col md:flex-row gap-12">
+                                <!-- German Block -->
+                                <div
+                                    class="flex-1 space-y-8"
+                                    id="agenda-german"
+                                >
+                                    <div
+                                        class="p-6 bg-nikon-yellow rounded-2xl"
+                                    >
+                                        <h2
+                                            class="text-deep-black text-2xl font-black uppercase leading-tight"
+                                        >
+                                            Microscopy Programme<br />
+                                            <span
+                                                class="text-sm opacity-70 tracking-[0.2em] font-bold"
+                                                >(CONDUCTED IN GERMAN)</span
+                                            >
+                                        </h2>
+                                    </div>
+
+                                    <div class="space-y-4 relative">
+                                        <div
+                                            class="absolute left-4 top-0 bottom-0 w-px bg-nikon-yellow/20"
+                                        >
+                                        </div>
+
+                                        {
+                                            [
+                                                {
+                                                    time: "10:00",
+                                                    event: "Basic Microscopy lecture",
+                                                },
+                                                {
+                                                    time: "12:00",
+                                                    event: "Lunch break",
+                                                    type: "break",
+                                                },
+                                                {
+                                                    time: "13:00",
+                                                    event: "Basic Microscopy lecture",
+                                                },
+                                                {
+                                                    time: "14:30",
+                                                    event: "Coffee break",
+                                                    type: "break",
+                                                },
+                                                {
+                                                    time: "15:00",
+                                                    event: "Hands-on: Troubleshooting session",
+                                                },
+                                                {
+                                                    time: "15:30",
+                                                    event: "Hands-on: Image provided samples",
+                                                },
+                                                {
+                                                    time: "16:00",
+                                                    event: "Tour of Biolabs",
+                                                },
+                                            ].map((item) => (
+                                                <div
+                                                    class={`relative pl-12 py-3 ${item.type === "break" ? "opacity-50" : ""}`}
+                                                >
+                                                    <div
+                                                        class={`absolute left-[13px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full ${item.type === "break" ? "bg-graphite" : "bg-nikon-yellow"}`}
+                                                    />
+                                                    <div class="flex items-center gap-6">
+                                                        <span class="text-sm font-black text-nikon-yellow w-12">
+                                                            {item.time}
+                                                        </span>
+                                                        <span class="text-lg font-bold uppercase tracking-tight">
+                                                            {item.event}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+
+                                <!-- English Block -->
+                                <div
+                                    class="flex-1 space-y-8"
+                                    id="agenda-english"
+                                >
+                                    <div class="p-6 bg-acid-lime rounded-2xl">
+                                        <h2
+                                            class="text-deep-black text-2xl font-black uppercase leading-tight"
+                                        >
+                                            Campus Catalyst Session<br />
+                                            <span
+                                                class="text-sm opacity-70 tracking-[0.2em] font-bold"
+                                                >(CONDUCTED IN ENGLISH)</span
+                                            >
+                                        </h2>
+                                    </div>
+
+                                    <div class="space-y-4 relative">
+                                        <div
+                                            class="absolute left-4 top-0 bottom-0 w-px bg-acid-lime/20"
+                                        >
+                                        </div>
+
+                                        {
+                                            [
+                                                {
+                                                    time: "16:30",
+                                                    event: "Welcome to Campus Catalyst",
+                                                },
+                                                {
+                                                    time: "16:45",
+                                                    event: "Bring Your Ideas session",
+                                                },
+                                                {
+                                                    time: "17:15",
+                                                    event: "Winner selection by Jury",
+                                                },
+                                                {
+                                                    time: "17:30",
+                                                    event: "Networking with snacks and drinks",
+                                                },
+                                                {
+                                                    time: "17:45",
+                                                    event: "Surprise Segment",
+                                                },
+                                            ].map((item) => (
+                                                <div class="relative pl-12 py-3">
+                                                    <div class="absolute left-[13px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-acid-lime" />
+                                                    <div class="flex items-center gap-6">
+                                                        <span class="text-sm font-black text-acid-lime w-12">
+                                                            {item.time}
+                                                        </span>
+                                                        <span class="text-lg font-bold uppercase tracking-tight">
+                                                            {item.event}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+
+                    <!-- Registration Section -->
+                    <Section variant="clean" className="py-32" id="register">
+                        <div class="max-w-4xl mx-auto px-6 text-center">
+                            <div
+                                class="p-12 md:p-24 bg-nikon-yellow rounded-[3rem] text-deep-black relative overflow-hidden"
+                            >
+                                <div
+                                    class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/dust.png')]"
+                                >
+                                </div>
+
+                                <h2
+                                    class="text-5xl md:text-7xl font-black uppercase mb-8 leading-none italic"
+                                >
+                                    Scan to<br />Register
+                                </h2>
+
+                                <!-- QR Placeholder -->
+                                <div
+                                    class="inline-block p-6 bg-white rounded-3xl shadow-xl mb-12"
+                                >
+                                    <div
+                                        class="w-48 h-48 md:w-64 md:h-64 bg-deep-black flex items-center justify-center p-4"
+                                    >
+                                        <div class="text-white text-4xl">
+                                            QR CODE
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <p
+                                        class="text-xl font-bold uppercase tracking-tight"
+                                    >
+                                        Need help?
+                                    </p>
+                                    <p class="text-sm font-medium">
+                                        If you have any questions, contact:
+                                    </p>
+                                    <a
+                                        href="mailto:Ivonne.Wollenberg@nikon.com"
+                                        class="text-2xl font-black underline decoration-4 underline-offset-8 transition-colors hover:text-white"
+                                        >Ivonne.Wollenberg@nikon.com</a
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="mt-16">
+                                <a
+                                    href="https://www.microscope.healthcare.nikon.com"
+                                    target="_blank"
+                                    class="text-off-white/40 hover:text-nikon-yellow transition-colors text-sm font-bold uppercase tracking-widest"
+                                    >www.microscope.healthcare.nikon.com</a
+                                >
+                            </div>
+                        </div>
+                    </Section>
+
+                    <Footer client:visible />
+                </div>
+            </div>
+
+            <style>
+                /* Add custom animation for the seats badge */
+                @keyframes pulse-subtle {
+                    0%,
+                    100% {
+                        transform: scale(1);
+                        box-shadow: 0 0 30px rgba(255, 212, 0, 0.3);
+                    }
+                    50% {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 50px rgba(255, 212, 0, 0.5);
+                    }
+                }
+                .animate-pulse {
+                    animation: pulse-subtle 3s infinite ease-in-out;
+                }
+            </style>
+        </section>
+    </main></Layout
+>

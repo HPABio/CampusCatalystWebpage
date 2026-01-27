@@ -6,40 +6,42 @@ const events = [
     {
         step: "01",
         theme: "Ecosystem Launch",
-        title: "Campus Catalyst I",
-        date: "OCT / NOV 2025",
-        status: "Upcoming",
+        title: "CAM/CAT Vol 1",
+        date: "OCT 2024",
+        status: "Complete",
         description: "The big kickoff. Founder/investor collaboration and panel-led synergy.",
+        link: "/recap/vol1",
     },
     {
         step: "02",
-        theme: "Idea Conversion",
-        title: "Campus Catalyst II",
-        date: "DEC 2025",
-        status: "Planning",
-        description: "From idea → validation. Focusing on team, IP, and first major milestones.",
+        theme: "Shedding New Light On IDEAS",
+        title: "CAM/CAT Vol 2",
+        date: "26 February 2026",
+        status: "Upcoming",
+        description: "In collaboration with Nikon. A full day of microscopy training followed by idea sharing and networking.",
+        link: "/events/vol2",
     },
     {
         step: "03",
         theme: "Translation Build",
-        title: "Campus Catalyst III",
-        date: "APR 2026",
-        status: "Scheduled",
+        title: "CAM/CAT Vol 3",
+        date: "SUMMER 2026",
+        status: "Planning",
         description: "Preclinical paths and early company building partnerships.",
     },
     {
         step: "04",
         theme: "Scaling Growth",
-        title: "Campus Catalyst IV",
-        date: "JUL 2026",
+        title: "CAM/CAT Vol 4",
+        date: "FALL 2026",
         status: "Scheduled",
         description: "Financing and VC expectations. Moving from startup to growth.",
     },
     {
         step: "05",
         theme: "Big Splash",
-        title: "Campus Catalyst V",
-        date: "OCT 2026",
+        title: "CAM/CAT Vol 5",
+        date: "WINTER 2026",
         status: "Flagship",
         description: "The grand finale. Expanded seats, top-tier speakers, and ecosystem pull.",
     },
@@ -75,13 +77,18 @@ export const Timeline = () => {
                                     <span className="text-7xl md:text-8xl font-black text-graphite mb-2 leading-none">
                                         {event.step}
                                     </span>
-                                    <div className={`p-8 bg-charcoal border border-graphite rounded-2xl w-full max-w-md ${index % 2 === 0 ? '' : 'text-left'
-                                        }`}>
+                                    <div className={`p-8 bg-charcoal border border-graphite rounded-2xl w-full max-w-md transition-all ${event.link ? 'hover:border-acid-lime cursor-pointer group' : ''} ${index % 2 === 0 ? '' : 'text-left'
+                                        }`}
+                                        onClick={() => event.link && (window.location.href = event.link)}
+                                    >
                                         <div className="flex justify-between items-start mb-4">
                                             <p className="text-acid-lime font-bold uppercase tracking-widest text-xs">{event.theme}</p>
                                             <Badge variant="outline" className="text-[10px] py-0">{event.status}</Badge>
                                         </div>
-                                        <h3 className="text-2xl font-black uppercase mb-2">{event.title}</h3>
+                                        <h3 className="text-2xl font-black uppercase mb-2 group-hover:text-acid-lime transition-colors">
+                                            {event.title}
+                                            {event.link && <span className="ml-2 text-acid-lime opacity-0 group-hover:opacity-100 transition-opacity">→</span>}
+                                        </h3>
                                         <p className="text-off-white/60 text-sm mb-4">{event.date}</p>
                                         <p className="text-off-white/80">{event.description}</p>
                                     </div>

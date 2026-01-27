@@ -13,7 +13,7 @@ Below is a **style guide** for the Campus Catalyst website inspired by the visua
 
 ### Core palette
 
-* **Acid Lime (Primary):** `#C8FF00` (or `#BFFF00` if you want slightly warmer)
+* **Acid Lime (Primary):** `#8FFF2B` (formerly `#C8FF00`)
 * **Pitch Black (Base):** `#0A0A0A`
 * **Charcoal (Surface):** `#141414`
 * **Graphite (Borders):** `#242424`
@@ -29,7 +29,7 @@ Below is a **style guide** for the Campus Catalyst website inspired by the visua
 
 * Glow shadow for lime elements:
 
-  * `0 0 24px rgba(200,255,0,0.25)`
+  * `0 0 24px rgba(143,255,43,0.25)`
 * Subtle background gradient option:
 
   * Black → Charcoal radial vignette (center lighter, edges darker)

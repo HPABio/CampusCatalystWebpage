@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="Contact | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-8">
+                Get in <span class="text-acid-lime">Touch</span>
+            </h1>
+            <p class="text-xl text-off-white/60 max-w-2xl mb-12">
+                Inquiries about speaking, partnering, or just want to say hi?
+                Reach out to us.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <form class="space-y-6">
+                    <div>
+                        <label
+                            class="block text-xs font-black uppercase text-acid-lime mb-2 tracking-widest"
+                            >Name</label
+                        >
+                        <input
+                            type="text"
+                            class="w-full bg-charcoal border border-graphite rounded-xl px-6 py-4 focus:border-acid-lime outline-none transition-colors"
+                            placeholder="Your Name"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-black uppercase text-acid-lime mb-2 tracking-widest"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            class="w-full bg-charcoal border border-graphite rounded-xl px-6 py-4 focus:border-acid-lime outline-none transition-colors"
+                            placeholder="hello@world.com"
+                        />
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-black uppercase text-acid-lime mb-2 tracking-widest"
+                            >Message</label
+                        >
+                        <textarea
+                            rows="4"
+                            class="w-full bg-charcoal border border-graphite rounded-xl px-6 py-4 focus:border-acid-lime outline-none transition-colors"
+                            placeholder="How can we help?"></textarea>
+                    </div>
+                    <button
+                        disabled
+                        class="w-full bg-acid-lime text-deep-black py-4 rounded-xl font-black uppercase tracking-tight hover:scale-105 transition-transform opacity-50 cursor-not-allowed"
+                    >
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="space-y-12">
+                    <div>
+                        <h3
+                            class="text-acid-lime font-black uppercase text-sm tracking-widest mb-4"
+                        >
+                            Venue
+                        </h3>
+                        <p class="text-2xl font-black uppercase">
+                            BioLabs Heidelberg
+                        </p>
+                        <p class="text-off-white/60">
+                            Nikola-Tesla-Straße 1<br />69124 Heidelberg
+                        </p>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-acid-lime font-black uppercase text-sm tracking-widest mb-4"
+                        >
+                            Social
+                        </h3>
+                        <div class="flex gap-4">
+                            <a
+                                href="#"
+                                class="text-off-white/60 hover:text-acid-lime transition-colors"
+                                >LinkedIn</a
+                            >
+                            <a
+                                href="#"
+                                class="text-off-white/60 hover:text-acid-lime transition-colors"
+                                >Instagram</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

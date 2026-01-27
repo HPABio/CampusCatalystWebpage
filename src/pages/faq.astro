@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<Layout title="FAQ | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <section class="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-8">FAQ</h1>
+            <div class="space-y-12">
+                <div>
+                    <h3
+                        class="text-xl font-bold text-acid-lime mb-4 tracking-tight uppercase"
+                    >
+                        What is Campus Catalyst?
+                    </h3>
+                    <p class="text-off-white/60 leading-relaxed">
+                        Campus Catalyst is an event series designed to connect
+                        start-ups, investors, and researchers within the life
+                        science ecosystem of Southwest Germany.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        class="text-xl font-bold text-acid-lime mb-4 tracking-tight uppercase"
+                    >
+                        Where do the events take place?
+                    </h3>
+                    <p class="text-off-white/60 leading-relaxed">
+                        Currently, most events are hosted at BioLabs Heidelberg
+                        in the Heidelberg Innovation Park.
+                    </p>
+                </div>
+                <div>
+                    <h3
+                        class="text-xl font-bold text-acid-lime mb-4 tracking-tight uppercase"
+                    >
+                        Who can attend?
+                    </h3>
+                    <p class="text-off-white/60 leading-relaxed">
+                        Anyone interested in the life sciences, from students
+                        and researchers to founders and industry professionals.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <Footer client:visible />
+    </main>
+</Layout>

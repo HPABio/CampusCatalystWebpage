@@ -1,0 +1,147 @@
+---
+import Layout from "../layouts/main.astro";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+import logo from "../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png";
+
+const events = [
+    {
+        vol: 1,
+        theme: "Ecosystem Launch",
+        date: "OCT 2024",
+        status: "Complete",
+        description:
+            "The big kickoff. Founder/investor collaboration and panel-led synergy.",
+        link: "/recap/vol1",
+        color: "text-acid-lime",
+        glow: "hover:border-acid-lime",
+        badgeBg: "bg-acid-lime",
+    },
+    {
+        vol: 2,
+        theme: "Shedding New Light On IDEAS",
+        date: "26 FEB 2026",
+        status: "Upcoming",
+        description:
+            "In collaboration with Nikon. A full day of microscopy training, innovation, and networking at BioLabs Heidelberg.",
+        link: "/events/vol2",
+        color: "text-nikon-yellow",
+        glow: "hover:border-nikon-yellow",
+        badgeBg: "bg-nikon-yellow",
+    },
+    {
+        vol: 3,
+        theme: "Translation Build",
+        date: "SUMMER 2026",
+        status: "Planning",
+        description:
+            "Preclinical paths and early company building partnerships. Bridging the gap between research and reality.",
+        color: "text-acid-lime",
+        glow: "hover:border-acid-lime",
+        badgeBg: "bg-acid-lime",
+    },
+    {
+        vol: 4,
+        theme: "Scaling Growth",
+        date: "FALL 2026",
+        status: "Scheduled",
+        description:
+            "Financing and VC expectations. Moving from startup to growth. Preparing for the world stage.",
+        color: "text-acid-lime",
+        glow: "hover:border-acid-lime",
+        badgeBg: "bg-acid-lime",
+    },
+    {
+        vol: 5,
+        theme: "Big Splash",
+        date: "WINTER 2026",
+        status: "Flagship",
+        description:
+            "The grand finale. Expanded seats, top-tier speakers, and maximum ecosystem pull in Heidelberg.",
+        color: "text-acid-lime",
+        glow: "hover:border-acid-lime",
+        badgeBg: "bg-acid-lime",
+    },
+];
+---
+
+<Layout title="Events | Campus Catalyst">
+    <main class="bg-deep-black min-h-screen text-off-white">
+        <!-- Hero Section -->
+        <section
+            class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center border-b border-graphite"
+        >
+            <div class="mb-12">
+                <img
+                    src={logo.src}
+                    alt="Campus Catalyst"
+                    class="h-24 md:h-32 object-contain mx-auto mb-8 filter drop-shadow-[0_0_20px_rgba(143,255,43,0.2)]"
+                />
+                <h1
+                    class="text-4xl md:text-6xl font-black uppercase tracking-tighter"
+                >
+                    All <span class="text-acid-lime">Editions</span>
+                </h1>
+            </div>
+            <p class="text-xl text-off-white/60 max-w-2xl mx-auto mb-12">
+                A five-part journey through the life science venture cycle.
+                Explore the past, present, and future of the series.
+            </p>
+        </section>
+
+        <!-- Events Grid -->
+        <section class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {
+                    events.map((event) => (
+                        <div
+                            class={`p-8 bg-charcoal border border-graphite rounded-3xl transition-all duration-300 group flex flex-col ${event.glow}`}
+                        >
+                            <div class="flex justify-between items-start mb-6">
+                                <span
+                                    class={`font-black uppercase tracking-[0.2em] text-xs ${event.color}`}
+                                >
+                                    Vol {event.vol}
+                                </span>
+                                <span
+                                    class={`px-3 py-1 ${event.badgeBg} text-deep-black rounded-full text-[10px] font-black uppercase`}
+                                >
+                                    {event.status}
+                                </span>
+                            </div>
+
+                            <h2 class="text-2xl font-black uppercase mb-4 leading-none group-hover:text-acid-lime transition-colors">
+                                {event.theme}
+                            </h2>
+
+                            <p class="text-off-white/40 font-bold uppercase tracking-widest text-[10px] mb-6">
+                                {event.date}
+                            </p>
+
+                            <p class="text-off-white/70 mb-8 flex-grow leading-relaxed">
+                                {event.description}
+                            </p>
+
+                            {event.link ? (
+                                <a
+                                    href={event.link}
+                                    class="inline-flex items-center justify-center px-6 py-3 bg-white/5 border border-white/10 hover:bg-acid-lime hover:text-deep-black transition-all rounded-xl font-black uppercase text-xs"
+                                >
+                                    {event.status === "Complete"
+                                        ? "View Recap"
+                                        : "View Details"}
+                                </a>
+                            ) : (
+                                <div class="inline-flex items-center justify-center px-6 py-3 bg-white/5 border border-white/10 opacity-30 rounded-xl font-black uppercase text-xs">
+                                    Coming Soon
+                                </div>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+
+        <Footer client:visible />
+    </main>
+</Layout>
