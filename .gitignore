@@ -8,8 +8,7 @@ node_modules/
 
 #agentic directories
 .skillsRepo/
-# .claude/skills/
-# .gemini/skills/
+.agent/
 
 #localAssets
 src/localAssets/
