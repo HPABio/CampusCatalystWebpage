@@ -2,6 +2,10 @@
 import Layout from "../layouts/main.astro";
 import { Footer } from "../components/Footer";
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import nucleateLogo from "../assets/CorporateDesign/partners_nucleate.png";
+import biolabsLogo from "../assets/CorporateDesign/partners_biolabs.png";
+import biobeyondLogo from "../assets/CorporateDesign/partners_biobeyond.png";
 ---
 
 <Layout title="Partners | Campus Catalyst">
@@ -17,12 +21,18 @@ import "../styles/global.css";
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
                 {
-                    ["Nucleate", "BioLabs", "biobeyond", "iGEM Heidelberg"].map(
+                    [
+                        { name: "Nucleate", logo: nucleateLogo },
+                        { name: "BioLabs", logo: biolabsLogo },
+                        { name: "biobeyond", logo: biobeyondLogo },
+                    ].map(
                         (partner) => (
                             <div class="aspect-video bg-charcoal border border-graphite rounded-xl flex items-center justify-center p-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
-                                <span class="text-xl font-black uppercase text-white/20">
-                                    {partner}
-                                </span>
+                                <Image
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    class={`w-full h-full object-contain ${partner.name === "biobeyond" ? "mix-blend-screen" : ""}`}
+                                />
                             </div>
                         ),
                     )
