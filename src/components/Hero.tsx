@@ -48,7 +48,7 @@ export const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-6"
                 >
-                    <Button variant="sticker" size="lg" onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Button variant="sticker" size="lg" onClick={() => window.open('https://luma.com/7o4axiip', '_blank')}>
                         REGISTER FOR CAM/CAT VOL 2
                     </Button>
                     <Button variant="outline" size="lg" onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}>

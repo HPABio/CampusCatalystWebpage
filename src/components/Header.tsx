@@ -48,7 +48,9 @@ export const Header = () => {
                         </a>
                     ))}
                     <a
-                        href="/#registration"
+                        href="https://luma.com/7o4axiip"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="px-6 py-2 bg-acid-lime text-deep-black rounded-full font-black uppercase tracking-tight text-xs hover:scale-105 transition-transform"
                     >
                         Register
@@ -85,7 +87,9 @@ export const Header = () => {
                                 </a>
                             ))}
                             <a
-                                href="/#registration"
+                                href="https://luma.com/7o4axiip"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full text-center px-6 py-4 bg-acid-lime text-deep-black rounded-xl font-black uppercase tracking-tight"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >

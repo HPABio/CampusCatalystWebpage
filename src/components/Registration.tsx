@@ -21,7 +21,7 @@ export const Registration = () => {
                         <Button
                             className="bg-deep-black text-acid-lime hover:scale-105 transition-transform"
                             size="lg"
-                            onClick={() => window.open('https://luma.com/gj3649ki', '_blank')}
+                            onClick={() => window.open('https://luma.com/7o4axiip', '_blank')}
                         >
                             SECURE YOUR SPOT
                         </Button>
