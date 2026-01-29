@@ -15,7 +15,7 @@ export const Hero = () => {
                     className="mb-8"
                 >
                     <Badge variant="outline" className="text-sm py-1 px-4 border-acid-lime/50">
-                        Event Series 2025-2026
+                        Building Biotech
                     </Badge>
                 </motion.div>
 
@@ -38,8 +38,9 @@ export const Hero = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-xl md:text-2xl text-off-white/70 max-w-2xl font-medium mb-12"
                 >
-                    Supercharging the life science ecosystem in Southwest Germany.
-                    Breaking the mold of traditional scientific events.
+                    {/* Supercharging the life science ecosystem in Southwest Germany. */}
+                    An unconventional event series about building the biotech ecosystem in Southwest Germany.
+                    {/* Breaking the mold of traditional scientific events. */}
                 </motion.p>
 
                 <motion.div

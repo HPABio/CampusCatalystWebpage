@@ -35,7 +35,7 @@ const speakers = [
     },
     {
         name: "Alexander Pattberg",
-        role: "BioLabs Heidelberg",
+        role: "Nucleate",
         image: AlexanderPattberg.src,
         vol: 1,
         pattern: "cross"

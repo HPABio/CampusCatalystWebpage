@@ -14,8 +14,8 @@ export const Registration = () => {
                         <span className="italic">outscale</span> you.
                     </h2>
                     <p className="text-xl md:text-2xl font-bold mb-12 max-w-2xl opacity-80">
-                        Join the inaugural edition of Campus Catalyst.
-                        Seats are limited to ensure high-voltage networking.
+                        Join the second edition of Campus Catalyst.
+                        Seats are limited to create a high-impact networking environment.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6">
                         <Button

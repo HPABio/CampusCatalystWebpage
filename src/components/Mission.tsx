@@ -12,8 +12,8 @@ export const Mission = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-black uppercase mb-8 leading-tight"
                     >
-                        Breaking the <br />
-                        <span className="text-acid-lime">Scientific Mold</span>
+                        Breaking<br />
+                        <span className="text-acid-lime">The Mold</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -22,10 +22,23 @@ export const Mission = () => {
                         transition={{ delay: 0.2 }}
                         className="text-lg md:text-xl text-off-white/80 leading-relaxed font-medium"
                     >
-                        Campus Catalyst isn't just another seminar series. It's a high-voltage platform
+                       
+                       {/*  Campus Catalyst isn't just another seminar series. It's a high-voltage platform
                         designed to bridge the gap between academic research and commercial impact.
                         We bring together the region's most innovative minds—founders, investors,
-                        and researchers—to shape the future of biotech in Southwest Germany.
+                        and researchers—to shape the future of biotech in Southwest Germany.  */}
+                        As a collaboration project between BioLabs Heidelberg, Nucleate, and biobeyond,
+                        the Campus Catalyst is a community first event series that highlights the different
+                        aspects of the founders journey with Heidelberg's local life science ecosystem as its backdrop.
+                        For each event, we invite founders, investors, and researchers to share their insights and anecdotes
+                        and give you the opportunity to ask questions and engage in discussions. 
+                        
+                        For the curious minds that want to go beyond the surface, each chapter of the Campus Catalyst will 
+                        feature a unique surprise session that changes with each event.
+                        A 1:1 with a founder? A panel discussion? A workshop? You'll have to come and find out!
+                        
+                        The Campus Catalyst is a space where ideas can be shared, connections can be made, and the biotech ecosystem can be
+                        shaped.
                     </motion.p>
                 </div>
 
