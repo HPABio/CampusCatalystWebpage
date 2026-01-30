@@ -6,7 +6,7 @@ const events = [
     {
         step: "01",
         theme: "Ecosystem Launch",
-        title: "CAM/CAT Vol 1",
+        title: "Catalyst Vol 1",
         date: "OCT 2024",
         status: "Complete",
         description: "The big kickoff. Founder/investor collaboration and panel-led synergy.",
@@ -15,7 +15,7 @@ const events = [
     {
         step: "02",
         theme: "Shedding New Light On IDEAS",
-        title: "CAM/CAT Vol 2",
+        title: "Catalyst Vol 2",
         date: "26 February 2026",
         status: "Upcoming",
         description: "In collaboration with Nikon. A full day of microscopy training followed by idea sharing and networking.",
@@ -24,7 +24,7 @@ const events = [
     {
         step: "03",
         theme: "Translation Build",
-        title: "CAM/CAT Vol 3",
+        title: "Catalyst Vol 3",
         date: "SUMMER 2026",
         status: "Planning",
         description: "Preclinical paths and early company building partnerships.",
@@ -32,7 +32,7 @@ const events = [
     {
         step: "04",
         theme: "Scaling Growth",
-        title: "CAM/CAT Vol 4",
+        title: "Catalyst Vol 4",
         date: "FALL 2026",
         status: "Scheduled",
         description: "Financing and VC expectations. Moving from startup to growth.",
@@ -40,7 +40,7 @@ const events = [
     {
         step: "05",
         theme: "Big Splash",
-        title: "CAM/CAT Vol 5",
+        title: "Catalyst Vol 5",
         date: "WINTER 2026",
         status: "Flagship",
         description: "The grand finale. Expanded seats, top-tier speakers, and ecosystem pull.",
@@ -51,7 +51,7 @@ export const Timeline = () => {
     return (
         <Section variant="clean" className="bg-deep-black" id="timeline">
             <div className="mb-16 md:mb-24">
-                <Badge variant="solid" className="mb-4">The Road Ahead</Badge>
+                <Badge variant="solid" className="mb-4 font-silkscreen">The Road Ahead</Badge>
                 <h2 className="text-4xl md:text-6xl font-black uppercase">Series <span className="text-acid-lime">Journey</span></h2>
             </div>
 

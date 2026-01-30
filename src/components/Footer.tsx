@@ -40,7 +40,7 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-xs font-bold uppercase tracking-widest text-acid-lime mb-6">Company</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-acid-lime mb-6">Project</h4>
                         <ul className="space-y-4 text-sm font-medium">
                             <li><a href="/about" className="text-off-white/60 hover:text-acid-lime transition-colors">About Us</a></li>
                             <li><a href="/partners" className="text-off-white/60 hover:text-acid-lime transition-colors">Partners</a></li>

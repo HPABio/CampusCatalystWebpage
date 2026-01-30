@@ -3,6 +3,8 @@ import Layout from "../../layouts/main.astro";
 import { Footer } from "../../components/Footer";
 import { Section } from "../../components/ui/Section";
 import "../../styles/global.css";
+import { Image } from "astro:assets";
+import nikonLogo from "../../assets/CampusCatalyst Design - Vol 2/Nikon_Logo.svg";
 
 const nikonYellow = "#FFD400";
 const ccLime = "#8FFF2B";
@@ -49,13 +51,22 @@ const ccLime = "#8FFF2B";
             <div
                 class="max-w-7xl mx-auto px-6 w-full relative z-10 py-20 text-center"
             >
-                <div
-                    class="inline-flex items-center gap-3 border border-nikon-yellow/50 text-nikon-yellow px-5 py-2 text-sm font-black uppercase tracking-[0.2em] rounded-full mb-12 bg-nikon-yellow/5"
-                >
-                    <span
-                        class="w-2 h-2 rounded-full bg-nikon-yellow animate-ping"
-                    ></span>
-                    Campus Catalyst — Vol 2
+                <div class="flex flex-col items-center space-y-4 mb-12">
+                    <p
+                        class="text-off-white/40 font-bold uppercase tracking-[0.4em] text-[10px]"
+                    >
+                        In collaboration with
+                    </p>
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-8 md:gap-16"
+                    >
+                        <!-- Nikon Logo -->
+                        <Image
+                            src={nikonLogo}
+                            alt="Nikon"
+                            class="h-10 md:h-32 w-auto"
+                        />
+                    </div>
                 </div>
 
                 <h1
@@ -73,33 +84,13 @@ const ccLime = "#8FFF2B";
                 </h1>
 
                 <div class="flex flex-col items-center space-y-10">
-                    <div class="flex flex-col items-center space-y-4">
-                        <p
-                            class="text-off-white/40 font-bold uppercase tracking-[0.4em] text-[10px]"
-                        >
-                            In collaboration with
-                        </p>
-                        <div
-                            class="flex flex-wrap justify-center items-center gap-8 md:gap-16"
-                        >
-                            <!-- Nikon Logo -->
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/2/25/Nikon_Logo.svg"
-                                alt="Nikon"
-                                class="h-10 md:h-14 w-auto filter brightness-0 invert"
-                            />
-
-                            <!-- Divider -->
-                            <div class="w-px h-8 bg-graphite rotate-12"></div>
-
-                            <!-- Campus Catalyst Logo Text -->
-                            <div
-                                class="text-3xl font-black uppercase tracking-tighter flex items-center gap-1"
-                            >
-                                <span class="text-white">Campus</span>
-                                <span class="text-acid-lime">Catalyst</span>
-                            </div>
-                        </div>
+                    <div
+                        class="inline-flex items-center gap-3 border border-nikon-yellow/50 text-nikon-yellow px-5 py-2 text-sm font-black uppercase tracking-[0.2em] rounded-full bg-nikon-yellow/5"
+                    >
+                        <span
+                            class="w-2 h-2 rounded-full bg-nikon-yellow animate-ping"
+                        ></span>
+                        Campus Catalyst — Vol 2
                     </div>
 
                     <!-- Supporting Logos -->

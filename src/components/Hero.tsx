@@ -50,10 +50,10 @@ export const Hero = () => {
                     className="flex flex-col sm:flex-row gap-6"
                 >
                     <Button variant="sticker" size="lg" onClick={() => window.open('https://luma.com/7o4axiip', '_blank')}>
-                        REGISTER FOR CAM/CAT VOL 2
+                        REGISTER FOR CAM/CAT - VOL 2
                     </Button>
-                    <Button variant="outline" size="lg" onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })}>
-                        VIEW TIMELINE
+                    <Button variant="outline" size="lg" onClick={() => window.location.href = '/events/vol2'}>
+                        VOL 2 - PROGRAM
                     </Button>
                 </motion.div>
             </div>

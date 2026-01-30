@@ -6,12 +6,19 @@ import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Cat
 export const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [currentPath, setCurrentPath] = useState('');
 
     useEffect(() => {
+        setCurrentPath(window.location.pathname);
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const isActive = (path: string) => {
+        if (path === '/' && currentPath !== '/') return false;
+        return currentPath.startsWith(path);
+    };
 
     const navLinks = [
         { name: 'Events', href: '/events' },
@@ -42,7 +49,10 @@ export const Header = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-xs font-black uppercase tracking-widest text-off-white/70 hover:text-acid-lime transition-colors"
+                            className={`font-black uppercase tracking-widest transition-colors ${isActive(link.href)
+                                ? 'text-acid-lime font-silkscreen text-xl'
+                                : 'text-off-white/70 hover:text-acid-lime'
+                                }`}
                         >
                             {link.name}
                         </a>
@@ -51,7 +61,7 @@ export const Header = () => {
                         href="https://luma.com/7o4axiip"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-2 bg-acid-lime text-deep-black rounded-full font-black uppercase tracking-tight text-xs hover:scale-105 transition-transform"
+                        className="px-6 py-0.5 bg-acid-lime text-deep-black rounded-full font-silkscreen font-black uppercase tracking-tight text-lg hover:scale-105 transition-transform"
                     >
                         Register
                     </a>
@@ -80,7 +90,10 @@ export const Header = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    className="text-xl font-black uppercase tracking-tight text-off-white hover:text-acid-lime"
+                                    className={`text-xl font-black uppercase tracking-tight transition-colors ${isActive(link.href)
+                                        ? 'text-acid-lime font-silkscreen'
+                                        : 'text-off-white hover:text-acid-lime'
+                                        }`}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
