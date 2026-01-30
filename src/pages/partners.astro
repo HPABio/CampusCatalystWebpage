@@ -22,20 +22,20 @@ import biobeyondLogo from "../assets/CorporateDesign/partners_biobeyond.png";
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
                 {
                     [
-                        { name: "Nucleate", logo: nucleateLogo },
-                        { name: "BioLabs", logo: biolabsLogo },
-                        { name: "biobeyond", logo: biobeyondLogo },
-                    ].map(
-                        (partner) => (
-                            <div class="aspect-video bg-charcoal border border-graphite rounded-xl flex items-center justify-center p-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
-                                <Image
-                                    src={partner.logo}
-                                    alt={partner.name}
-                                    class={`w-full h-full object-contain ${partner.name === "biobeyond" ? "mix-blend-screen" : ""}`}
-                                />
-                            </div>
-                        ),
-                    )
+                        { name: "Nucleate", logo: nucleateLogo, link: "https://nucleate.org" },
+                        { name: "BioLabs", logo: biolabsLogo, link: "https://biolabs.io" },
+                        { name: "biobeyond", logo: biobeyondLogo, link: "https://biobeyond.eu" }
+                    ].map((partner) => (
+                        <a href={partner.link}>
+                        <div class="aspect-video bg-charcoal border border-graphite rounded-xl flex items-center justify-center p-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+                            <Image
+                                src={partner.logo}
+                                alt={partner.name}
+                                class={`w-full h-full object-contain ${partner.name === "biobeyond" ? "mix-blend-screen" : "hover:mix-blend-screen hover:contrast-[1.5]"}`}
+                            />
+                        </div>
+                        </a>
+                    ))
                 }
             </div>
 
