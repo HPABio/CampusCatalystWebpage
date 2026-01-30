@@ -17,7 +17,7 @@ const events = [
         theme: "Shedding New Light On IDEAS",
         title: "Catalyst Vol 2",
         date: "26 February 2026",
-        status: "Upcoming",
+        status: "Next Up",
         description: "In collaboration with Nikon. A full day of microscopy training followed by idea sharing and networking.",
         link: "/events/vol2",
     },

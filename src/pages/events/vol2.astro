@@ -4,7 +4,7 @@ import { Footer } from "../../components/Footer";
 import { Section } from "../../components/ui/Section";
 import "../../styles/global.css";
 import { Image } from "astro:assets";
-import nikonLogo from "../../assets/CampusCatalyst Design - Vol 2/Nikon_Logo.svg";
+import nikonLogo from "../../assets/CampusCatalyst Design - Vol 2/Nikon-Logo-horizontal.png";
 
 const nikonYellow = "#FFD400";
 const ccLime = "#8FFF2B";
@@ -28,29 +28,17 @@ const ccLime = "#8FFF2B";
             >
             </div>
 
-            <!-- Corner Badge -->
-            <div
-                class="absolute top-24 right-6 md:top-32 md:right-12 z-50 transform rotate-12 hover:rotate-0 transition-all duration-500 cursor-help"
-            >
-                <div
-                    class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-nikon-yellow text-deep-black flex flex-col items-center justify-center text-center p-2 border-4 border-deep-black shadow-[0_0_40px_rgba(255,212,0,0.4)] animate-pulse"
-                >
-                    <span class="text-[10px] font-black uppercase leading-none"
-                        >Limit</span
-                    >
-                    <span
-                        class="text-3xl md:text-5xl font-black leading-none py-1"
-                        >10</span
-                    >
-                    <span class="text-[10px] font-black uppercase leading-none"
-                        >People</span
-                    >
-                </div>
-            </div>
-
             <div
                 class="max-w-7xl mx-auto px-6 w-full relative z-10 py-20 text-center"
             >
+                <div
+                    class="inline-flex items-center gap-3 border border-nikon-yellow/50 text-nikon-yellow px-5 py-2 text-sm font-black uppercase tracking-[0.2em] rounded-full bg-nikon-yellow/5"
+                >
+                    <span
+                        class="w-2 h-2 rounded-full bg-nikon-yellow animate-ping"
+                    ></span>
+                    Campus Catalyst — Vol 2
+                </div>
                 <div class="flex flex-col items-center space-y-4 mb-12">
                     <p
                         class="text-off-white/40 font-bold uppercase tracking-[0.4em] text-[10px]"
@@ -84,31 +72,6 @@ const ccLime = "#8FFF2B";
                 </h1>
 
                 <div class="flex flex-col items-center space-y-10">
-                    <div
-                        class="inline-flex items-center gap-3 border border-nikon-yellow/50 text-nikon-yellow px-5 py-2 text-sm font-black uppercase tracking-[0.2em] rounded-full bg-nikon-yellow/5"
-                    >
-                        <span
-                            class="w-2 h-2 rounded-full bg-nikon-yellow animate-ping"
-                        ></span>
-                        Campus Catalyst — Vol 2
-                    </div>
-
-                    <!-- Supporting Logos -->
-                    <div
-                        class="flex flex-wrap justify-center items-center gap-12 pt-4"
-                    >
-                        <div
-                            class="text-[10px] font-black uppercase tracking-[0.3em] text-off-white/30 border-b border-white/10 pb-1"
-                        >
-                            BioLabs Heidelberg
-                        </div>
-                        <div
-                            class="text-[10px] font-black uppercase tracking-[0.3em] text-off-white/30 border-b border-white/10 pb-1"
-                        >
-                            Nucleate
-                        </div>
-                    </div>
-
                     <div class="pt-8 flex flex-col items-center gap-8">
                         <a
                             href="https://luma.com/7o4axiip"

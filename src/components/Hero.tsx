@@ -3,11 +3,30 @@ import { Button } from './ui/Button';
 import { Badge } from './ui/Badge';
 import { Section } from './ui/Section';
 import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png';
+import mapImage from '../assets/CorporateDesign/snazzymaps.com_editor_customize_142736.png';
 
 export const Hero = () => {
     return (
-        <Section variant="textured" className="pt-32 pb-48 md:pt-48 md:pb-64 overflow-hidden">
-            <div className="flex flex-col items-center text-center">
+        <Section variant="textured" className="pt-32 pb-48 md:pt-48 md:pb-64 overflow-hidden relative">
+            {/* Background Map Layer */}
+            <div
+                className="absolute inset-0 opacity-100">
+                <img
+                    src={mapImage.src} // Use .src to get the string URL
+                    alt="Background Map"
+                    className="absolute inset-0 opacity-20 w-full h-full object-cover mix-blend-screem" // Standard React className
+                />
+            </div>
+            <div className="absolute inset-0 z-0">
+
+                {/* Vignette / Fade to Black edges */}
+                <div className=" absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0a_80%)]" />
+
+                {/* Green Cool Gradient Glow */}
+                <div className="absolute opacity-35 inset-0 bg-[radial-gradient(circle_at_center,rgba(143,255,43,0.15)_0%,transparent_70%)] mix-blend-screen" />
+            </div>
+
+            <div className="flex flex-col items-center text-center relative z-10">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
