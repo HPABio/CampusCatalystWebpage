@@ -81,7 +81,7 @@ export const Footer = () => {
                     </div>
 
                     <div id="newsletter">
-                        <h4 className="text-xs font-bold uppercase tracking-widest text-acid-lime mb-6">Stay Voltage</h4>
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-acid-lime mb-6">Stay Engaged</h4>
                         <p className="text-off-white/60 text-sm mb-6">Subscribe to our high-energy newsletter for updates.</p>
                         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                             {status === 'success' ? (
