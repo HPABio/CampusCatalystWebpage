@@ -3,7 +3,7 @@
 ########## BUILD ##########
 FROM oven/bun:1 AS build
 WORKDIR /app
-COPY package.json bun.lockb* ./
+COPY package.json bun.lock* ./
 RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
@@ -11,10 +11,13 @@ RUN bun run build
 ########## RUNTIME ##########
 FROM node:20-alpine AS runtime
 WORKDIR /srv
-RUN npm i -g serve@14
+
+# Copy the SSR build output
 COPY --from=build /app/dist ./dist
 
+ENV HOST=0.0.0.0
 ENV PORT=80
 EXPOSE 80
 
-CMD ["sh", "-lc", "serve dist -l ${PORT}"]
+# Run the Astro Node.js SSR server
+CMD ["node", "./dist/server/entry.mjs"]
