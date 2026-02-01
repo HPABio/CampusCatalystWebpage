@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bunx skills find:*)",
+      "Bash(bunx skills add:*)"
+    ]
+  }
+}
