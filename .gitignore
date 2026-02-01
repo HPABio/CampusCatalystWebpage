@@ -10,6 +10,9 @@ node_modules/
 .skillsRepo/
 .agent/
 .agents/
+.agents/skills/*
+
+
 
 #localAssets
 src/localAssets/
