@@ -9,6 +9,7 @@ node_modules/
 #agentic directories
 .skillsRepo/
 .agent/
+.agents/
 
 #localAssets
 src/localAssets/
