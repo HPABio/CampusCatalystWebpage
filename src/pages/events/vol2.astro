@@ -5,6 +5,7 @@ import { Section } from "../../components/ui/Section";
 import "../../styles/global.css";
 import { Image } from "astro:assets";
 import nikonLogo from "../../assets/CampusCatalyst Design - Vol 2/Nikon-Logo-horizontal.png";
+import nikonQRCode from "../../assets/CampusCatalyst Design - Vol 2/NikonQRCode.png";
 
 const nikonYellow = "#FFD400";
 const ccLime = "#8FFF2B";
@@ -103,67 +104,59 @@ const ccLime = "#8FFF2B";
                                 </p>
                             </div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="w-full max-w-2xl mx-auto">
                                 <div
-                                    class="group p-8 bg-deep-black border border-graphite rounded-3xl hover:border-nikon-yellow transition-all duration-300 flex flex-col items-center text-center space-y-4"
+                                    class="relative p-8 md:p-12 bg-deep-black border-2 border-acid-lime/20 rounded-[3rem] hover:border-acid-lime transition-all duration-500 flex flex-col items-center text-center space-y-12 group/outer"
                                 >
+                                    <!-- Inner Container: Microscopy -->
                                     <div
-                                        class="w-12 h-12 rounded-xl bg-nikon-yellow/10 flex items-center justify-center group-hover:bg-nikon-yellow transition-colors"
+                                        class="w-full max-w-lg p-8 bg-deep-black/50 border-2 border-nikon-yellow/30 rounded-3xl hover:border-nikon-yellow hover:bg-deep-black hover:shadow-[0_0_40px_rgba(255,212,0,0.15)] transition-all duration-300 flex flex-col items-center gap-6"
                                     >
-                                        <span
-                                            class="text-2xl group-hover:scale-110 transition-transform"
-                                            >🔬</span
+                                        <h3
+                                            class="text-2xl md:text-3xl font-black uppercase text-nikon-yellow leading-tight"
                                         >
-                                    </div>
-                                    <h3
-                                        class="text-xl font-black uppercase group-hover:text-nikon-yellow transition-colors"
-                                    >
-                                        Full Microscopy Programme
-                                    </h3>
-                                    <p class="text-sm text-off-white/50">
-                                        Lectures + Hands-on sessions focused on
-                                        training and innovation.
-                                    </p>
-                                    <span
-                                        class="border border-nikon-yellow/30 text-nikon-yellow/70 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-widest"
-                                        >10:00 — 18:00</span
-                                    >
-                                    <a
-                                        href="https://outlook.office.com/book/TestDemoBuchungsseite@nikonglobal.onmicrosoft.com/s/CR453QMcRU6s5VvUDQGGpQ2?ismsaljsauthenabled=true"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="mt-4 px-6 py-3 bg-nikon-yellow text-deep-black rounded-xl font-black uppercase tracking-tight text-sm hover:scale-105 transition-transform"
-                                    >
-                                        Register for Workshop
-                                    </a>
-                                </div>
+                                            Access Request<br />to Microscopy
+                                            workshop
+                                        </h3>
 
-                                <a
-                                    href="#agenda-english"
-                                    class="group p-8 bg-deep-black border border-graphite rounded-3xl hover:border-acid-lime transition-all duration-300 flex flex-col items-center text-center space-y-4"
-                                >
-                                    <div
-                                        class="w-12 h-12 rounded-xl bg-acid-lime/10 flex items-center justify-center group-hover:bg-acid-lime transition-colors"
-                                    >
-                                        <span
-                                            class="text-2xl group-hover:scale-110 transition-transform"
-                                            >💡</span
+                                        <a
+                                            href="https://outlook.office.com/book/TestDemoBuchungsseite@nikonglobal.onmicrosoft.com/s/CR453QMcRU6s5VvUDQGGpQ2?ismsaljsauthenabled=true"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="px-8 py-3 bg-nikon-yellow text-deep-black rounded-xl font-black uppercase tracking-tight text-sm hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,212,0,0.3)]"
                                         >
+                                            Register for Workshop
+                                        </a>
                                     </div>
-                                    <h3
-                                        class="text-xl font-black uppercase group-hover:text-acid-lime transition-colors"
+
+                                    <!-- Campus Catalyst Content -->
+                                    <div
+                                        class="flex flex-col items-center space-y-6"
                                     >
-                                        Campus Catalyst Only
-                                    </h3>
-                                    <p class="text-sm text-off-white/50">
-                                        Idea sharing, pitching, and networking
-                                        with the community.
-                                    </p>
-                                    <span
-                                        class="border border-acid-lime/30 text-acid-lime/70 text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-widest"
-                                        >16:30 — 18:00</span
-                                    >
-                                </a>
+                                        <h3
+                                            class="text-3xl md:text-4xl font-black uppercase text-acid-lime leading-tight group-hover/outer:text-acid-lime transition-colors"
+                                        >
+                                            Register to<br />
+                                            Campus Catalyst<br />
+                                            Afternoon/Evening<br />
+                                            Program
+                                        </h3>
+
+                                        <p
+                                            class="text-sm text-off-white/70 leading-relaxed"
+                                        >
+                                            Idea presentation +<br />
+                                            control the narrative workshop
+                                        </p>
+
+                                        <a
+                                            href="#agenda-english"
+                                            class="mt-4 px-8 py-3 border-2 border-acid-lime text-acid-lime rounded-xl font-black uppercase tracking-widest text-sm hover:bg-acid-lime hover:text-deep-black transition-all duration-300"
+                                        >
+                                            View Agenda
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </Section>
@@ -173,13 +166,13 @@ const ccLime = "#8FFF2B";
                         <div class="max-w-7xl mx-auto px-6">
                             <div class="mb-16 text-center">
                                 <span
-                                    class="inline-block px-4 py-1 bg-nikon-yellow text-deep-black rounded-full font-black uppercase text-xs mb-4"
+                                    class="inline-block px-4 py-1 bg-acid-lime text-deep-black rounded-full font-black uppercase text-xs mb-4"
                                     >Master of Ceremonies</span
                                 >
                                 <h2
                                     class="text-4xl md:text-6xl font-black uppercase"
                                 >
-                                    Featured <span class="text-nikon-yellow"
+                                    Featured <span class="text-acid-lime"
                                         >Expert</span
                                     >
                                 </h2>
@@ -187,14 +180,14 @@ const ccLime = "#8FFF2B";
 
                             <div class="max-w-4xl mx-auto">
                                 <div
-                                    class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-nikon-yellow transition-all duration-500"
+                                    class="group bg-charcoal border border-graphite rounded-3xl overflow-hidden hover:border-acid-lime transition-all duration-500"
                                 >
                                     <div class="flex flex-col md:flex-row">
                                         <div
                                             class="md:w-2/5 aspect-square md:aspect-auto bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
                                         >
                                             <div
-                                                class="w-full h-full bg-gradient-to-br from-nikon-yellow/20 to-charcoal flex items-center justify-center text-nikon-yellow/10"
+                                                class="w-full h-full bg-gradient-to-br from-acid-lime/20 to-charcoal flex items-center justify-center text-acid-lime/10"
                                             >
                                                 <span
                                                     class="text-6xl font-black uppercase tracking-widest opacity-20"
@@ -211,7 +204,7 @@ const ccLime = "#8FFF2B";
                                                 Felix Ernst Schmelzer
                                             </h3>
                                             <p
-                                                class="text-nikon-yellow font-bold uppercase tracking-widest text-sm mb-6"
+                                                class="text-acid-lime font-bold uppercase tracking-widest text-sm mb-6"
                                             >
                                                 Science Communication Strategist
                                                 | Moderator
@@ -455,22 +448,29 @@ const ccLime = "#8FFF2B";
                                 <h2
                                     class="text-5xl md:text-7xl font-black uppercase mb-8 leading-none italic"
                                 >
-                                    Scan to<br />Register
+                                    Microscopy <br /> Workshop
                                 </h2>
 
-                                <!-- QR Placeholder -->
+                                <!-- QR Code -->
                                 <div
                                     class="inline-block p-6 bg-white rounded-3xl shadow-xl mb-12"
                                 >
                                     <div
-                                        class="w-48 h-48 md:w-64 md:h-64 bg-deep-black flex items-center justify-center p-4"
+                                        class="w-48 h-48 md:w-64 md:h-64 bg-white flex items-center justify-center overflow-hidden"
                                     >
-                                        <div class="text-white text-4xl">
-                                            QR CODE
-                                        </div>
+                                        <Image
+                                            src={nikonQRCode}
+                                            alt="Nikon Registration QR Code"
+                                            class="w-full h-auto"
+                                        />
                                     </div>
                                 </div>
 
+                                <h2
+                                    class="text-5xl md:text-7xl font-black uppercase mb-8 leading-none italic"
+                                >
+                                    Scan to <br /> enter
+                                </h2>
                                 <div class="space-y-6">
                                     <p
                                         class="text-xl font-bold uppercase tracking-tight"
