@@ -6,6 +6,7 @@ import "../../styles/global.css";
 import { Image } from "astro:assets";
 import nikonLogo from "../../assets/CampusCatalyst Design - Vol 2/Nikon-Logo-horizontal.png";
 import nikonQRCode from "../../assets/CampusCatalyst Design - Vol 2/NikonQRCode.png";
+import FelixSchmelzer from "../../assets/CampusCatalyst Design - Vol 2/Photos/Felix_Ernst_Schmelzer_BW_noBG.png";
 
 const nikonYellow = "#FFD400";
 const ccLime = "#8FFF2B";
@@ -186,14 +187,11 @@ const ccLime = "#8FFF2B";
                                         <div
                                             class="md:w-2/5 aspect-square md:aspect-auto bg-deep-black overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700"
                                         >
-                                            <div
-                                                class="w-full h-full bg-gradient-to-br from-acid-lime/20 to-charcoal flex items-center justify-center text-acid-lime/10"
-                                            >
-                                                <span
-                                                    class="text-6xl font-black uppercase tracking-widest opacity-20"
-                                                    >FES</span
-                                                >
-                                            </div>
+                                            <Image
+                                                src={FelixSchmelzer}
+                                                alt="Felix Ernst Schmelzer"
+                                                class="w-full h-full object-contain object-bottom scale-110 group-hover:scale-105 transition-transform duration-700"
+                                            />
                                         </div>
                                         <div
                                             class="flex-1 p-10 flex flex-col justify-center"

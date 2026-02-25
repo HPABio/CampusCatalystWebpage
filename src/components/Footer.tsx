@@ -1,6 +1,105 @@
 import { Section } from './ui/Section';
-import { Instagram, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import nucleateLogo from '../assets/CorporateDesign/partners_nucleate.png';
+import biolabsLogo from '../assets/CorporateDesign/partners_biolabs.png';
+import biobeyondLogo from '../assets/CorporateDesign/partners_biobeyond.png';
+
+const PARTNERS = [
+    {
+        name: "Nucleate",
+        logo: nucleateLogo,
+        links: {
+            linkedin: "https://www.linkedin.com/company/nucleategermany/",
+            instagram: "https://www.instagram.com/nucleate.germany/",
+            twitter: "https://x.com/NucleateGermany"
+        }
+    },
+    {
+        name: "BioLabs",
+        logo: biolabsLogo,
+        links: {
+            linkedin: "https://www.linkedin.com/company/biolabs-heidelberg/",
+            instagram: "https://www.instagram.com/biolabsheidelberg/",
+            twitter: "https://x.com/BiolabsHD"
+        }
+    },
+    {
+        name: "biobeyond",
+        logo: biobeyondLogo,
+        links: {
+            linkedin: "https://www.linkedin.com/company/biobeyond/",
+            instagram: "https://biobeyond.eu",
+            twitter: "https://biobeyond.eu"
+        }
+    }
+];
+
+const XIcon = ({ className }: { className?: string }) => (
+    <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        className={className}
+        fill="currentColor"
+    >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+    </svg>
+);
+
+const SocialCircleGroup = ({ icon, type }: { icon: React.ReactNode, type: 'linkedin' | 'instagram' | 'twitter' }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+        <div
+            className="relative flex flex-col items-center"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div className="p-2 border border-graphite rounded-full text-off-white hover:text-acid-lime hover:border-acid-lime transition-all cursor-pointer z-10 bg-deep-black">
+                {icon}
+            </div>
+
+            <AnimatePresence>
+                {isHovered && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full pt-2 flex flex-col gap-2 items-center z-20"
+                    >
+                        {PARTNERS.map((partner, idx) => (
+                            <motion.a
+                                key={partner.name}
+                                href={partner.links[type]}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ scale: 0, y: -20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 20,
+                                    delay: idx * 0.05
+                                }}
+                                className="w-8 h-8 rounded-full border border-graphite bg-charcoal flex items-center justify-center overflow-hidden hover:border-acid-lime transition-colors group"
+                                title={`${partner.name} ${type}`}
+                            >
+                                <img
+                                    src={partner.logo.src}
+                                    alt={partner.name}
+                                    className="w-5 h-5 object-contain grayscale group-hover:grayscale-0 transition-all"
+                                />
+                            </motion.a>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+};
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -16,15 +115,9 @@ export const Footer = () => {
                             the life science ecosystem in Southwest Germany.
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="p-2 border border-graphite rounded-full text-off-white hover:text-acid-lime hover:border-acid-lime transition-all">
-                                <Linkedin className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 border border-graphite rounded-full text-off-white hover:text-acid-lime hover:border-acid-lime transition-all">
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                            <a href="#" className="p-2 border border-graphite rounded-full text-off-white hover:text-acid-lime hover:border-acid-lime transition-all">
-                                <Twitter className="w-5 h-5" />
-                            </a>
+                            <SocialCircleGroup icon={<Linkedin className="w-5 h-5" />} type="linkedin" />
+                            <SocialCircleGroup icon={<Instagram className="w-5 h-5" />} type="instagram" />
+                            <SocialCircleGroup icon={<XIcon className="w-5 h-5" />} type="twitter" />
                         </div>
                     </div>
 
