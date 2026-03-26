@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png';
 
 export const Header = () => {
@@ -36,8 +38,8 @@ export const Header = () => {
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <a href="/" className="group block">
-                    <img
-                        src={logo.src}
+                    <Image
+                        src={logo}
                         alt="Campus Catalyst"
                         className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
                     />

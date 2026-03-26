@@ -8,9 +8,9 @@ node_modules/
 
 #agentic directories
 .skillsRepo/
-.agent/
-.agents/
-.agents/skills/*
+# .agent/
+# .agents/
+# .agents/skills/*
 
 
 

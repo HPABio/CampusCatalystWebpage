@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "google-analytics": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "c7a60543ca235c272d002f0dd6e1370c9cc37f4df604d9f9d75daefaa31ef89a"
+    },
+    "gtm-implementation": {
+      "source": "aimonk2025/google-tag-manager-automation",
+      "sourceType": "github",
+      "computedHash": "b39c539499206a004a51bc2860e3c1cbac48835cb0834f1da1d60adf47e584bd"
+    }
+  }
+}
