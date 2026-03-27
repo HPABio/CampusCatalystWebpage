@@ -1,7 +1,6 @@
 import { Section } from './ui/Section';
 import { Instagram, Linkedin, Mail } from 'lucide-react';
 import logo from '../assets/CampusCatalyst Design - Vol 1/PR Material/Campus-Catalys_LogoLight.png';
-import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import nucleateLogo from '../assets/CorporateDesign/partners_nucleate.png';
